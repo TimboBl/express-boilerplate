@@ -133,3 +133,7 @@ tests/baselines/reference/dt
 # Jetbrains
 .idea/
 
+# Project files
+dist/
+dist_test/
+
