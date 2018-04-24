@@ -5,8 +5,9 @@ import { PORT } from "./configs/config";
 import * as http from "http";
 import { logger } from "./utils/logger";
 import { AppT } from "./types/App";
+import { MongoServiceT } from "./types/services/MongoServiceT";
 
-export const App = ((): AppT => {
+export const App = (mongoService: MongoServiceT): AppT => {
     const app = express();
     let server: http.Server;
 
@@ -70,4 +71,4 @@ export const App = ((): AppT => {
         listen,
         shutdown
     };
-})();
+};
