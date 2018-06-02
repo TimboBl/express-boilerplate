@@ -41,7 +41,7 @@ export const App = (mongoService: MongoServiceT): AppT => {
     // This route sends a 404 if non of your routes matched
 
     app.all("*", (req: express.Request, res: express.Response) => {
-        logger.info("Request to non recognizes route", {
+        logger.info("Request to non recognized route", {
             method: req.method,
             url: req.url,
 
